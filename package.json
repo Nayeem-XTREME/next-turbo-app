@@ -1,10 +1,20 @@
 {
+  "name": "next-turbo-app",
+  "packageManager": "yarn@1.22.19",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "private": true,
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=16.0.0"
+  },
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,scss,css,json,md}\""
   },
   "devDependencies": {
     "@turbo/gen": "^1.9.7",
@@ -12,11 +22,5 @@
     "eslint-config-custom": "*",
     "prettier": "^2.5.1",
     "turbo": "^1.9.7"
-  },
-  "name": "next-turbo-app",
-  "packageManager": "yarn@1.22.19",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  }
 }
