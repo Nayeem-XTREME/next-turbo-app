@@ -1,0 +1,23 @@
+{
+  "name": "redux-toolkit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "config": "*",
+    "helpers": "*",
+    "react-redux": "^8.0.5"
+  },
+  "devDependencies": {
+    "@turbo/types": "*",
+    "eslint": "^8.41.0",
+    "redux-logger": "^3.0.6",
+    "typescript": "^5.0.4"
+  }
+}
