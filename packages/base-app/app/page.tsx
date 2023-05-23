@@ -1,7 +1,9 @@
+import { Button } from 'components/core';
+
 export default function Page() {
   return (
     <>
-      <button>WEB</button>
+      <Button>WEB</Button>
     </>
   );
 }

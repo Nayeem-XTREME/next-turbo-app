@@ -1,5 +1,5 @@
 {
-  "name": "redux-toolkit",
+  "name": "state",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,6 +17,7 @@
   "devDependencies": {
     "@turbo/types": "*",
     "eslint": "^8.41.0",
+    "eslint-config-custom": "*",
     "redux-logger": "^3.0.6",
     "typescript": "^5.0.4"
   }

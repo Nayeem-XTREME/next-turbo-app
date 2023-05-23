@@ -6,7 +6,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 const config = {
   reactStrictMode: true,
-  transpilePackages: ['ui'],
+  transpilePackages: ['components'],
   images: {
     formats: ['image/avif', 'image/webp'],
     domains: ['i.dummyjson.com', 'i.vimeocdn.com'],

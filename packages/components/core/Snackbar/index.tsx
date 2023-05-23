@@ -1,9 +1,8 @@
 'use client';
 
 import { Alert, Slide, Snackbar } from '@mui/material';
-
-import { useDispatch, useSelector } from '@/state/hooks';
-import { closeSnackbar } from '@/state/reducers';
+import { useDispatch, useSelector } from 'state/hooks';
+import { closeSnackbar } from 'state/reducers';
 
 import type { SnackbarOrigin } from '@mui/material/Snackbar';
 

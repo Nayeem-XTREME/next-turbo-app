@@ -1,5 +1,5 @@
 import type { SerializedError } from '@reduxjs/toolkit';
-import type { ErrorResponse } from 'turbo-app';
+import type { ErrorResponse } from '@turbo/types';
 
 export type CustomError = {
   status: number;
