@@ -20,6 +20,10 @@
     "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build"
   },
   "dependencies": {
+    "@app/configs": "*",
+    "@app/helpers": "*",
+    "@app/state": "*",
+    "@app/utils": "*",
     "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.11.0",
     "@emotion/server": "^11.11.0",
@@ -43,6 +47,7 @@
     "@app/components": "*"
   },
   "devDependencies": {
+    "@app/types": "*",
     "@next/bundle-analyzer": "^13.4.3",
     "@tailwindcss/container-queries": "^0.1.1",
     "@types/node": "^20.2.3",

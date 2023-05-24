@@ -6,28 +6,5 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint \"**/*.ts*\""
-  },
-  "devDependencies": {
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
-    "autoprefixer": "^10.4.14",
-    "eslint": "^8.41.0",
-    "eslint-config-custom": "*",
-    "postcss": "^8.4.23",
-    "tailwind-styled-components": "^2.2.0",
-    "tailwindcss": "^3.3.2",
-    "tsconfig": "*",
-    "typescript": "^4.5.2"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.11.0",
-    "@emotion/styled": "^11.11.0",
-    "@mui/lab": "^5.0.0-alpha.131",
-    "@mui/material": "^5.13.2",
-    "next": "^13.4.3",
-    "next-auth": "^4.22.1",
-    "react": "^17.0.2",
-    "@app/state": "*",
-    "@app/utils": "*"
   }
 }

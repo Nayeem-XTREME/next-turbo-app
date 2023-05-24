@@ -7,16 +7,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@app/configs": "*",
-    "next-auth": "^4.22.1"
-  },
-  "devDependencies": {
-    "@app/types": "*",
-    "eslint": "^8.41.0",
-    "eslint-config-custom": "*",
-    "tsconfig": "*",
-    "typescript": "^5.0.4"
-  }
+  "license": "ISC"
 }

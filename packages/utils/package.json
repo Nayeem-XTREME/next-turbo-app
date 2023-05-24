@@ -6,11 +6,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "next": "^13.4.3"
-  },
-  "devDependencies": {
-    "eslint-config-custom": "*"
-  }
+  "license": "ISC"
 }
