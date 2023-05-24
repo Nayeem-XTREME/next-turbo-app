@@ -1,6 +1,6 @@
 import { getSession } from 'next-auth/react';
 
-import type { Session } from '@turbo/types';
+import type { Session } from '@app/types';
 
 /**
  * Retrieves the authentication token for the current session.

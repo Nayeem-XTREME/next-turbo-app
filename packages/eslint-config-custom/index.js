@@ -67,7 +67,7 @@ module.exports = {
             'next-redux-wrapper',
             '^@?\\w',
           ],
-          // pages
+          // Custom packages
           // components
           // hooks
           // api
@@ -77,17 +77,17 @@ module.exports = {
           // configs
           // types
           [
-            '^(@/app)(/.*|$)',
-            '^(@/pages)(/.*|$)',
-            '^(@/components)(/.*|$)',
-            '^(@/hooks)(/.*|$)',
-            '^(@/api)(/.*|$)',
-            '^(@/state)(/.*|$)',
-            '^(@/helpers)(/.*|$)',
-            '^(@/utils)(/.*|$)',
-            '^(@/configs)(/.*|$)',
-            '^(@/types)(/.*|$)',
+            '^(@app/components)(/.*|$)',
+            '^(@app/hooks)(/.*|$)',
+            '^(@app/api)(/.*|$)',
+            '^(@app/state)(/.*|$)',
+            '^(@app/helpers)(/.*|$)',
+            '^(@app/utils)(/.*|$)',
+            '^(@app/configs)(/.*|$)',
+            '^(@app/types)(/.*|$)',
           ],
+          // pages
+          ['^(@/app)(/.*|$)', '^(@/pages)(/.*|$)'],
           // Other relative imports. Put same-folder imports and `.` last.
           ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
           // Parent imports. Put `..` last.

@@ -1,7 +1,8 @@
 'use client';
 
 import { Provider } from 'react-redux';
-import { store } from 'state/store';
+
+import { store } from '@app/state/store';
 
 /**
  * Renders a Redux Provider component that wraps around the given children,

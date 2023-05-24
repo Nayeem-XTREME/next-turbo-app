@@ -1,5 +1,5 @@
 {
-  "name": "state",
+  "name": "@app/state",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,12 +10,12 @@
   "license": "ISC",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
-    "config": "*",
-    "helpers": "*",
+    "@app/configs": "*",
+    "@app/helpers": "*",
     "react-redux": "^8.0.5"
   },
   "devDependencies": {
-    "@turbo/types": "*",
+    "@app/types": "*",
     "eslint": "^8.41.0",
     "eslint-config-custom": "*",
     "redux-logger": "^3.0.6",

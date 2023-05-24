@@ -1,5 +1,5 @@
 {
-  "name": "config",
+  "name": "@app/configs",
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",

@@ -4,12 +4,13 @@ import {
   type FetchArgs,
   fetchBaseQuery,
 } from '@reduxjs/toolkit/query/react';
-import { apiUrl } from 'config';
-import { getToken } from 'helpers';
+
+import { getToken } from '@app/helpers';
+import { apiUrl } from '@app/configs';
 
 import type { CustomError } from '../types';
 import type { AddProductProps, GetProductProps } from './types';
-import type { GetProductResponse, SuccessResponse } from '@turbo/types';
+import type { GetProductResponse, SuccessResponse } from '@app/types';
 
 export const productApi = createApi({
   reducerPath: 'productApi',

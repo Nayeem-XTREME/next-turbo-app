@@ -1,4 +1,4 @@
-import { Button } from 'components/core';
+import { Button } from '@app/components/core';
 
 export default function Page() {
   return (

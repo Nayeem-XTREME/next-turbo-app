@@ -1,4 +1,4 @@
-import { apiUrl } from 'config';
+import { apiUrl } from '@app/configs';
 
 // Due to our current setup, supplying the request body through the Generics
 // does not help us at all.

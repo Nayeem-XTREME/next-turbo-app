@@ -4,7 +4,8 @@ import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
 import { createTheme } from '@mui/material';
 import { StyledEngineProvider, ThemeProvider } from '@mui/material/styles';
-import { inter } from 'utils/fonts';
+
+import { inter } from '@app/utils/fonts';
 
 const isBrowser = typeof document !== 'undefined';
 
