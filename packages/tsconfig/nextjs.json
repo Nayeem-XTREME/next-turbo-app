@@ -3,7 +3,6 @@
   "display": "Next.JS",
   "extends": "./base.json",
   "compilerOptions": {
-    "plugins": [{ "name": "next" }],
     "allowJs": true,
     "declaration": false,
     "declarationMap": false,
@@ -14,8 +13,16 @@
     "noEmit": true,
     "resolveJsonModule": true,
     "strict": false,
-    "target": "es5"
+    "target": "es5",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": ["src", "next-env.d.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", ".next", ".turbo"]
 }
