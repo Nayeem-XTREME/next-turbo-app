@@ -6,7 +6,7 @@ import {
 } from '@reduxjs/toolkit/query/react';
 
 import { getToken } from '@app/helpers';
-import { apiUrl } from '@app/configs';
+import { apiUrl } from '@app/configs/constants';
 
 import type { CustomError } from '../types';
 import type { AddProductProps, GetProductProps } from './types';

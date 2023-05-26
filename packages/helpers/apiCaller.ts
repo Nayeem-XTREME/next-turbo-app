@@ -1,4 +1,4 @@
-import { apiUrl } from '@app/configs';
+import { apiUrl } from '@app/configs/constants';
 
 // Due to our current setup, supplying the request body through the Generics
 // does not help us at all.
@@ -28,7 +28,6 @@ const config: ConfigArgs = {
  * @param {RequestInit} [options] - Additional fetch options to include in the request.
  * @returns {Promise<T>} A promise that resolves with the response data in JSON format.
  */
-
 const fetchWithHeaders = async <T>(
   endpoint: string,
   method: string,
@@ -48,6 +47,8 @@ const fetchWithHeaders = async <T>(
     ...options,
   };
 
+  console.log({ apiUrl, endpoint });
+
   const response = await fetch(`${apiUrl}/${endpoint}`, mergedOptions);
   const data = await response.json();
 
@@ -66,7 +67,6 @@ const fetchWithHeaders = async <T>(
  * @param {RequestInit} [options] - (Optional) The request options to include.
  * @return {Promise<T>} The response data of type T.
  */
-
 export const publicGet = async <T>(
   endpoint: string,
   options?: RequestInit
@@ -82,7 +82,6 @@ export const publicGet = async <T>(
  * @param {RequestInit} [options] - Optional settings such as headers or credentials for the fetch request.
  * @return {Promise<T>} A Promise that resolves with the response data in the specified type parameter T.
  */
-
 export const publicPost = async <T>(
   endpoint: string,
   body: ObjectWithAnyProperty,
@@ -100,7 +99,6 @@ export const publicPost = async <T>(
  * @param {RequestInit} [options] - Optional parameters for the request.
  * @return {Promise<T>} A Promise that resolves to a value of type T.
  */
-
 export const privateGet = async <T>(
   endpoint: string,
   token: string,
@@ -118,7 +116,6 @@ export const privateGet = async <T>(
  * @param {RequestInit} [options] - Optional request options to include such as headers.
  * @return {Promise<T>} - A promise that resolves to the parsed response data.
  */
-
 export const privatePost = async <T>(
   endpoint: string,
   token: string,
@@ -137,7 +134,6 @@ export const privatePost = async <T>(
  * @param {RequestInit} [options] - Additional options for the request.
  * @return {Promise<T>} A promise that resolves to the response data of type T.
  */
-
 export const privatePut = async <T>(
   endpoint: string,
   token: string,
