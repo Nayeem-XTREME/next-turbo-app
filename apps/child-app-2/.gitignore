@@ -1,0 +1,13 @@
+# Ignore all files and directories
+*
+
+# Include the .gitignore file itself
+!.gitignore
+
+# Include specific files you want to track
+!.env.dev
+!.env.tst
+!.env.prd
+
+# Exclude a specific folder
+!public/
