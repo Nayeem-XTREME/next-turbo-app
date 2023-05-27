@@ -5,7 +5,7 @@ import { useSession } from 'next-auth/react';
 import jwtDecode from 'jwt-decode';
 
 import type { RefreshTokenProps } from './types';
-import type { Session, TokenInfo } from '@/types';
+import type { Session, TokenInfo } from '@app/types';
 
 /**
  * Refreshes the token in the session by setting a new interval for refetching.

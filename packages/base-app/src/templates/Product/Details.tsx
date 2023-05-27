@@ -5,7 +5,7 @@ import { FlexCentered } from '@app/components/core';
 
 import type { GetProductResponse } from '@app/types';
 
-const StyledImage = tw(Image)`
+const StyledImage: typeof Image = tw(Image)`
   aspect-square 
   rounded-lg
   bg-gradient-radial 

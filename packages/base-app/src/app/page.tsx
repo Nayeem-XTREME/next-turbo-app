@@ -80,7 +80,7 @@ const WrappedLogo = tw.div`
   lg:bg-none
 `;
 
-const StyledLink = tw(Link)`
+const StyledLink: typeof Link = tw(Link)`
   pointer-events-none 
   flex 
   place-items-center 
@@ -90,7 +90,7 @@ const StyledLink = tw(Link)`
   lg:p-0
 `;
 
-const StyledSubLink = tw(Link)`
+const StyledSubLink: typeof Link = tw(Link)`
   group 
   rounded-lg 
   border 
