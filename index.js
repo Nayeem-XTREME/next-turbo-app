@@ -40,7 +40,7 @@ fs.readdirSync(appsDir).forEach((appName) => {
   });
 
   // Load the .env file for the current app
-  const envFilePath = path.join(appPath, '.env');
+  const envFilePath = path.join(appPath, '.env.dev');
   const envConfig = dotenv.parse(fs.readFileSync(envFilePath));
 
   // Update the "name" field in the app's package.json with the value from .env
