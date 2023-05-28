@@ -4,7 +4,11 @@ const baseConfig = require('@app/configs/tailwind/tailwind.config');
 
 module.exports = {
   ...baseConfig,
-  content: ['./src/**/*.{js,jsx,ts,tsx}', '../components/**/*.{js,jsx,ts,tsx}'],
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}',
+    '../components/**/*.{js,jsx,ts,tsx}',
+    '../../packages/components/**/*.{js,jsx,ts,tsx}',
+  ],
   theme: {
     extend: {
       ...baseConfig.theme.extend,
