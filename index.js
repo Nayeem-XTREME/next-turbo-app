@@ -1,6 +1,5 @@
+const fs = require('fs');
 const path = require('path');
-const fs = require('fs-extra');
-const dotenv = require('dotenv');
 
 const appsDir = path.join(__dirname, 'apps');
 const packagesDir = path.join(__dirname, 'packages');
@@ -10,13 +9,44 @@ const baseAppDir = path.join(packagesDir, 'base-app');
 // Excluded files
 const filesToExclude = [
   '.next',
+  '.turbo',
   '.env',
   '.env.dev',
   '.env.tst',
   '.env.prd',
   '.gitignore',
+  'package.json',
   'node_modules',
 ];
+
+// Helper function to copy directory recursively
+const copyDirectory = (src, dest) => {
+  if (!fs.existsSync(dest)) {
+    fs.mkdirSync(dest, { recursive: true });
+  }
+
+  const entries = fs.readdirSync(src, { withFileTypes: true });
+
+  for (const entry of entries) {
+    const srcPath = path.join(src, entry.name);
+    const destPath = path.join(dest, entry.name);
+
+    if (entry.isDirectory()) {
+      copyDirectory(srcPath, destPath);
+    } else {
+      fs.copyFileSync(srcPath, destPath);
+    }
+  }
+};
+
+// Custom implementation of the copy function using fs-extra
+const copy = (src, dest) => {
+  if (fs.lstatSync(src).isDirectory()) {
+    copyDirectory(src, dest);
+  } else {
+    fs.copyFileSync(src, dest);
+  }
+};
 
 // Iterate over each app
 fs.readdirSync(appsDir).forEach((appName) => {
@@ -27,7 +57,7 @@ fs.readdirSync(appsDir).forEach((appName) => {
     const filePath = path.join(appPath, file);
 
     if (!filesToExclude.includes(file)) {
-      fs.removeSync(filePath);
+      fs.rmSync(filePath, { recursive: true, force: true });
     }
   });
 
@@ -35,19 +65,29 @@ fs.readdirSync(appsDir).forEach((appName) => {
   fs.readdirSync(baseAppDir).forEach((file) => {
     if (!filesToExclude.includes(file)) {
       const filePath = path.join(baseAppDir, file);
-      fs.copySync(filePath, path.join(appPath, file));
+      copy(filePath, path.join(appPath, file));
     }
   });
 
-  // Load the .env file for the current app
-  const envFilePath = path.join(appPath, '.env.dev');
-  const envConfig = dotenv.parse(fs.readFileSync(envFilePath));
+  // Read the package.json files for the current app and the base app
+  const appPackageFilePath = path.join(appPath, 'package.json');
+  const basePackageFilePath = path.join(baseAppDir, 'package.json');
 
-  // Update the "name" field in the app's package.json with the value from .env
-  const packageFilePath = path.join(appPath, 'package.json');
-  const packageJson = fs.readJsonSync(packageFilePath);
+  const { name, version, private } = JSON.parse(
+    fs.readFileSync(appPackageFilePath, 'utf8')
+  );
+  const basePackageJson = JSON.parse(
+    fs.readFileSync(basePackageFilePath, 'utf8')
+  );
 
-  packageJson.name = envConfig.APP_NAME;
+  // Merge the package.json fields, excluding name, version, and private
+  const mergedPackageJson = { ...basePackageJson, name, version, private };
 
-  fs.writeJsonSync(packageFilePath, packageJson, { spaces: 2 });
+  // Write the merged package.json back to the app directory
+  fs.writeFileSync(
+    appPackageFilePath,
+    JSON.stringify(mergedPackageJson, null, 2)
+  );
 });
+
+console.log('Package.json update and directory copy complete.');

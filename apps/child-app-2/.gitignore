@@ -5,6 +5,7 @@
 !.gitignore
 
 # Include specific files you want to track
+!package.json
 !.env.dev
 !.env.tst
 !.env.prd
