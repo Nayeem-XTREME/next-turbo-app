@@ -15,7 +15,6 @@ const filesToExclude = [
   '.env.tst',
   '.env.prd',
   '.gitignore',
-  'package.json',
   'node_modules',
 ];
 
@@ -69,25 +68,17 @@ fs.readdirSync(appsDir).forEach((appName) => {
     }
   });
 
-  // Read the package.json files for the current app and the base app
+  // Read the package.json file for the current app
   const appPackageFilePath = path.join(appPath, 'package.json');
-  const basePackageFilePath = path.join(baseAppDir, 'package.json');
-
-  const { name, version, private } = JSON.parse(
+  const appPackageJson = JSON.parse(
     fs.readFileSync(appPackageFilePath, 'utf8')
   );
-  const basePackageJson = JSON.parse(
-    fs.readFileSync(basePackageFilePath, 'utf8')
-  );
 
-  // Merge the package.json fields, excluding name, version, and private
-  const mergedPackageJson = { ...basePackageJson, name, version, private };
+  // Update the app name
+  appPackageJson.name = appName;
 
-  // Write the merged package.json back to the app directory
-  fs.writeFileSync(
-    appPackageFilePath,
-    JSON.stringify(mergedPackageJson, null, 2)
-  );
+  // Write the updated package.json back to the app directory
+  fs.writeFileSync(appPackageFilePath, JSON.stringify(appPackageJson, null, 2));
 });
 
 console.log('Package.json update and directory copy complete.');
