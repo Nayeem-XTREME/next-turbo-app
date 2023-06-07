@@ -4,13 +4,13 @@ import {
   configureStore,
   type ThunkAction,
 } from '@reduxjs/toolkit';
-import logger from 'redux-logger';
 
 import { productApi, snackbarSlice } from './reducers';
 
 const middlewares = [productApi.middleware];
 
 if (process.env.NODE_ENV === 'development') {
+  const { logger } = require('redux-logger');
   middlewares.push(logger);
 }
 

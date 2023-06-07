@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  important: '#__next',
   theme: {
     screens: {
       xs: '480px',

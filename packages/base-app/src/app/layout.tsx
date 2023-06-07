@@ -9,7 +9,7 @@ import { inter } from '@app/utils/fonts';
 
 import type { Metadata } from 'next';
 
-import '@app/styles/index.scss';
+import '@/styles/index.scss';
 
 export const metadata: Metadata = {
   title: 'Create Next App',

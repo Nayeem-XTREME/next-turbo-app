@@ -1,9 +1,9 @@
 {
   "name": "@app/components",
+  "author": "",
   "version": "0.0.0",
-  "main": "./index.tsx",
-  "@app/types": "./index.tsx",
   "license": "MIT",
+  "description": "",
   "scripts": {
     "lint": "eslint \"**/*.ts*\""
   }
