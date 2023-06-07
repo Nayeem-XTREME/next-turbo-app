@@ -10,7 +10,7 @@ import { productApi, snackbarSlice } from './reducers';
 const middlewares = [productApi.middleware];
 
 if (process.env.NODE_ENV === 'development') {
-  const logger = require('redux-logger');
+  const { logger } = require('redux-logger');
   middlewares.push(logger);
 }
 

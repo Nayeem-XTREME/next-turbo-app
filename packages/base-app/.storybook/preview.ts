@@ -8,7 +8,7 @@ import { theme } from '@app/components/global/MuiProvider';
 
 import type { Preview } from '@storybook/react';
 
-import '@app/styles/index.scss';
+import '@/styles/index.scss';
 
 export const decorators = [
   withThemeByClassName({
