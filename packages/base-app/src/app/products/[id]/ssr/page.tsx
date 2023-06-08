@@ -20,8 +20,6 @@ const Product = ({ params }: { params: { id: string } }) => {
         </Link>
         <h4 className="my-8 text-center">Product ID: {params.id}</h4>
       </FlexCentered>
-
-      {/* @ts-expect-error Server Component */}
       <SSRProduct id={params.id} />
     </Wrapper>
   );
