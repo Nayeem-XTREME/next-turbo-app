@@ -5,6 +5,7 @@
   "license": "MIT",
   "description": "",
   "scripts": {
-    "lint": "eslint \"**/*.ts*\""
+    "lint": "eslint \"**/*.ts*\"",
+    "check-types": "tsc --pretty --noEmit"
   }
 }
