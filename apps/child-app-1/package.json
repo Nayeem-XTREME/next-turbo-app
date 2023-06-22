@@ -1,0 +1,6 @@
+{
+  "name": "child-app-1",
+  "dependencies": {
+    "next": "latest"
+  }
+}
