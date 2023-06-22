@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "next": "latest"
+    "next": "^13.4.7"
   }
 }
