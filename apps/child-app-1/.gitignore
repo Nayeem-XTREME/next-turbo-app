@@ -8,6 +8,7 @@
 !.env.dev
 !.env.tst
 !.env.prd
+!package.json
 
 # Exclude a specific folder
 !public/
