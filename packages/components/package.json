@@ -7,5 +7,44 @@
   "scripts": {
     "lint": "eslint \"**/*.ts*\"",
     "check-types": "tsc --pretty --noEmit"
+  },
+  "dependencies": {
+    "@app/configs": "workspace:*",
+    "@app/state": "workspace:*",
+    "@app/utils": "workspace:*",
+    "@emotion/cache": "^11.11.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/lab": "5.0.0-alpha.134",
+    "@mui/material": "^5.13.6",
+    "jwt-decode": "^3.1.2",
+    "next": "^13.4.8",
+    "next-auth": "^4.22.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1",
+    "react-redux": "^8.1.1"
+  },
+  "devDependencies": {
+    "@app/types": "workspace:*",
+    "@storybook/addon-essentials": "7.0.25",
+    "@storybook/addon-interactions": "7.0.25",
+    "@storybook/addon-links": "7.0.25",
+    "@storybook/addon-styling": "^1.3.2",
+    "@storybook/blocks": "7.0.25",
+    "@storybook/nextjs": "7.0.25",
+    "@storybook/react": "7.0.25",
+    "@storybook/testing-library": "0.2.0",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@types/node": "^20.3.3",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "eslint": "^8.44.0",
+    "eslint-config-custom": "workspace:*",
+    "sass": "^1.63.6",
+    "storybook": "7.0.25",
+    "tailwind-styled-components": "^2.2.0",
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.1.6"
   }
 }
