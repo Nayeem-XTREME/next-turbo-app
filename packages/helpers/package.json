@@ -7,12 +7,5 @@
     "check-types": "tsc --pretty --noEmit"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@app/configs": "workspace:*",
-    "next-auth": "4.22.1"
-  },
-  "devDependencies": {
-    "@app/types": "workspace:*"
-  }
+  "license": "ISC"
 }

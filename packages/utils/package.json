@@ -6,8 +6,5 @@
     "check-types": "tsc --pretty --noEmit"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "next": "13.4.8"
-  }
+  "license": "ISC"
 }
