@@ -8,12 +8,12 @@
     "declarationMap": false,
     "incremental": true,
     "jsx": "preserve",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": ["dom", "dom.iterable", "ES6"],
     "module": "esnext",
     "noEmit": true,
     "resolveJsonModule": true,
     "strict": false,
-    "target": "es5",
+    "target": "ES6",
     "plugins": [
       {
         "name": "next"

@@ -1,30 +1,20 @@
 import Image from 'next/image';
-import tw from 'tailwind-styled-components';
 
 import { FlexCentered } from '@app/components/core';
 
 import type { GetProductResponse } from '@app/types';
 
-const StyledImage: typeof Image = tw(Image)`
-  aspect-square 
-  rounded-lg
-  bg-gradient-radial 
-  from-gray-600 
-  to-gray-600/20 
-  object-contain 
-  shadow-md
-`;
-
 const Details = ({ data }: { data?: GetProductResponse }) => {
   return (
     <FlexCentered className="flex-col gap-4">
       {data?.thumbnail && data?.title && (
-        <StyledImage
+        <Image
           src={data.thumbnail}
           alt={data.title}
           width={400}
           height={400}
           priority
+          className="aspect-square rounded-lg bg-gradient-radial from-gray-600 to-gray-600/20 object-contain shadow-md"
         />
       )}
       <FlexCentered className="flex-col">

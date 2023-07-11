@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import tw from 'tailwind-styled-components';
 
@@ -29,18 +29,12 @@ const HomeTemplate = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [searchType, setSearchType] = useState<'ssr' | 'csr' | ''>('');
 
-  useEffect(() => {
-    if (loading && searchType) {
-      const productId = inputRef.current?.value;
-      router.push(`/products/${productId}/${searchType}`);
-    }
-  }, [loading, searchType, router]);
-
   const handleClick = (type: 'ssr' | 'csr') => {
     const productId = inputRef.current?.value;
     if (productId && !isNaN(parseFloat(productId))) {
       setLoading(true);
       setSearchType(type);
+      router.push(`/products/${productId}/${type}`);
     }
   };
 

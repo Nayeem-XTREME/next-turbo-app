@@ -9,5 +9,8 @@
   "license": "ISC",
   "dependencies": {
     "next": "13.4.8"
+  },
+  "devDependencies": {
+    "@app/configs": "workspace:*"
   }
 }
