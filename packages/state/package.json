@@ -9,14 +9,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@app/configs": "*",
-    "@app/helpers": "*",
-    "@mui/material": "^5.13.7",
+    "@app/configs": "workspace:*",
+    "@app/helpers": "workspace:*",
+    "@mui/material": "^5.14.0",
     "@reduxjs/toolkit": "^1.9.5",
     "react-redux": "^8.1.1"
   },
   "devDependencies": {
-    "@app/types": "*",
+    "@app/types": "workspace:*",
     "redux-logger": "^3.0.6"
   }
 }
