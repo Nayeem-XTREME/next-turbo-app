@@ -9,9 +9,9 @@
     "check-types": "tsc --pretty --noEmit"
   },
   "dependencies": {
-    "@app/configs": "*",
-    "@app/state": "*",
-    "@app/utils": "*",
+    "@app/configs": "workspace:*",
+    "@app/state": "workspace:*",
+    "@app/utils": "workspace:*",
     "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -26,7 +26,7 @@
     "react-redux": "^8.1.1"
   },
   "devDependencies": {
-    "@app/types": "*",
+    "@app/types": "workspace:*",
     "@storybook/addon-essentials": "7.0.25",
     "@storybook/addon-interactions": "7.0.25",
     "@storybook/addon-links": "7.0.25",
@@ -40,7 +40,7 @@
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
     "eslint": "^8.44.0",
-    "eslint-config-custom": "*",
+    "eslint-config-custom": "workspace:*",
     "sass": "^1.63.6",
     "storybook": "7.0.25",
     "tailwind-styled-components": "^2.2.0",
