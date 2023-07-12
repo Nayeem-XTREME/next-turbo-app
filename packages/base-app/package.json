@@ -17,11 +17,11 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@app/components": "workspace:*",
-    "@app/configs": "workspace:*",
-    "@app/helpers": "workspace:*",
-    "@app/state": "workspace:*",
-    "@app/utils": "workspace:*",
+    "@app/components": "*",
+    "@app/configs": "*",
+    "@app/helpers": "*",
+    "@app/state": "*",
+    "@app/utils": "*",
     "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.11.1",
     "@emotion/server": "^11.11.0",
@@ -42,7 +42,7 @@
     "tss-react": "^4.8.6"
   },
   "devDependencies": {
-    "@app/types": "workspace:*",
+    "@app/types": "*",
     "@next/bundle-analyzer": "^13.4.9",
     "@storybook/addon-essentials": "7.0.25",
     "@storybook/addon-interactions": "7.0.25",
@@ -60,7 +60,7 @@
     "autoprefixer": "^10.4.14",
     "cross-env": "^7.0.3",
     "eslint": "^8.44.0",
-    "eslint-config-custom": "workspace:*",
+    "eslint-config-custom": "*",
     "postcss": "^8.4.25",
     "sass": "^1.63.6",
     "storybook": "7.0.25",
