@@ -9,10 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@app/configs": "workspace:*",
+    "@app/configs": "*",
     "next-auth": "4.22.1"
   },
   "devDependencies": {
-    "@app/types": "workspace:*"
+    "@app/types": "*"
   }
 }
