@@ -47,8 +47,6 @@ const fetchWithHeaders = async <T>(
     ...options,
   };
 
-  console.log({ apiUrl, endpoint });
-
   const response = await fetch(`${apiUrl}/${endpoint}`, mergedOptions);
   const data = await response.json();
 

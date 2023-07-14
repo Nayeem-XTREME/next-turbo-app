@@ -17,7 +17,7 @@ const Error = ({ error, reset }: ErrorProps) => {
   }, [error]);
 
   return (
-    <Centered className="h-screen flex-col gap-4">
+    <Centered className="h-screen flex-col gap-8">
       <h2>Something went wrong!</h2>
       <Button variant="contained" color="error" onClick={() => reset()}>
         Try again
