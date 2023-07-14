@@ -6,6 +6,10 @@
     "npm": ">=7.0.0",
     "node": ">=16.0.0"
   },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "initiate": "node index",
     "build": "turbo run build",
